@@ -9,6 +9,30 @@ namespace QuanLyThuVienHVKTQS.controller
 {
     class NhaXuatBanController
     {
-        
+        QuanLiThuVienHVKTQSDataContext db = null;
+        public NhaXuatBanController()
+        {
+            db = new QuanLiThuVienHVKTQSDataContext();
+        }
+        public List<nhaxuatban> Detail()
+        {
+            var list = db.nhaxuatbans.ToList();
+            return list;
+        }
+        public int Add(nhaxuatban entity)
+        {
+            try
+            {
+                db.nhaxuatbans.InsertOnSubmit(entity);
+                db.SubmitChanges();
+                return entity.manxb;
+            }
+            catch (Exception)
+            {
+                return 0;
+                throw;
+            }
+        }
+
     }
 }
