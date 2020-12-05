@@ -8,6 +8,15 @@ namespace QuanLyThuVienHVKTQS.controller
 {
     class SachController
     {
-        
+        QuanLiThuVienHVKTQSDataContext db = null;
+        public SachController()
+        {
+            db = new QuanLiThuVienHVKTQSDataContext();
+        }
+        public List<sach> Detail()
+        {
+            var list = db.saches.ToList();
+            return list;
+        }
     }
 }
