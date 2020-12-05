@@ -33,6 +33,45 @@ namespace QuanLyThuVienHVKTQS.controller
                 throw;
             }
         }
+        public bool Delete(int id)
+        {
+            try
+            {
+                var obj = db.nhaxuatbans.First(m => m.manxb == id);
+                db.nhaxuatbans.DeleteOnSubmit(obj);
+                db.SubmitChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+                throw;
+            }
+
+        }
+
+        public bool Edit(nhaxuatban nxb)
+        {
+            var obj = db.nhaxuatbans.First(m => m.manxb == nxb.manxb);
+            if (obj != null)
+            {
+                try
+                {
+                    obj.tennxb = nxb.tennxb;
+                    obj.diachi = nxb.diachi;
+                    obj.sdt = nxb.sdt;
+                    db.SubmitChanges();
+                    return true;
+                }
+                catch (Exception)
+                {
+                    return false;
+                    throw;
+                }
+            }
+            return true;
+        }
+
 
     }
 }
