@@ -19,6 +19,45 @@ namespace QuanLyThuVienHVKTQS
         {
             InitializeComponent();
         }
-        
+
+        private void Boqua_MS_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void search_MStxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Thoat_MS_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Luu_MS_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Xoa_MS_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Sua_MS_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Them_MS_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listView_MS_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
