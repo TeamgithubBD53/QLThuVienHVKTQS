@@ -24,6 +24,7 @@ namespace QuanLyThuVienHVKTQS
         }
         public void HienThi_DG()
         {
+            //btn_enable(true);
             var dg = new DocGiaController();
             l = dg.Detail();
             listView_DG.Items.Clear();
@@ -98,6 +99,113 @@ namespace QuanLyThuVienHVKTQS
             else hanthedg.Text = l[index].handungthe.ToString();
 
         }
+        private void Them_DG_Click(object sender, EventArgs e)
+        {
+            btn_enable(true);
+            sothetxt.Text = "";
+            tendgtxt.Text = "";
+            ngaysinhdg.Text = "";
+            gioitinhdgtxt.Text = "";
+            emaildgtxt.Text = "";
+            diachidgtxt.Text = "";
+            socmtnddgtxt.Text = "";
+            ngaythedg.Text = "";
+            hanthedg.Text = "";
+            this.Them_bool = true;
+        }
+
+        private void Sua_DG_Click(object sender, EventArgs e)
+        {
+            btn_enable(true);
+            Sua_bool = true;
+        }
+
+        private void Xoa_DG_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có muốn xóa độc giả này?", "delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+            if (result == DialogResult.Yes)
+            {
+                int id = Convert.ToInt32(sothetxt.Text);
+                var entity = new DocGiaController();
+                if (entity.delete(id))
+                    HienThi_DG();
+                else
+                    MessageBox.Show("Xóa độc giả lỗi");
+            }
+        }
+
+        private void Luu_DG_Click(object sender, EventArgs e)
+        {
+            if (Them_bool == true && Sua_bool == false)
+            {
+                var entity = new docgia();
+
+                entity.sothe = Convert.ToInt32(sothetxt.Text);
+                entity.hoten = tendgtxt.Text;
+                entity.ngaysinh = ngaysinhdg.Value;
+                entity.gioitinh = gioitinhdgtxt.Text;
+                entity.diachi = diachidgtxt.Text;
+                entity.email = emaildgtxt.Text;
+                entity.socmtnd = socmtnddgtxt.Text;
+                entity.ngaylamthe = ngaythedg.Value;
+                entity.handungthe = hanthedg.Value;
+
+                var dg = new DocGiaController();
+                if (dg.Add(entity) > 0)
+                    HienThi_DG();
+                else
+                    MessageBox.Show("Thêm độc giả không thành công");
+            }
+            if (Them_bool == false && Sua_bool == true)
+            {
+                var entity = new docgia();
+                entity.sothe = Convert.ToInt32(sothetxt.Text);
+                entity.hoten = tendgtxt.Text;
+                entity.ngaysinh = ngaysinhdg.Value;
+                entity.gioitinh = gioitinhdgtxt.Text;
+                entity.diachi = diachidgtxt.Text;
+                entity.email = emaildgtxt.Text;
+                entity.socmtnd = socmtnddgtxt.Text;
+                entity.ngaylamthe = ngaythedg.Value;
+                entity.handungthe = hanthedg.Value;
+
+                var dg = new DocGiaController();
+                if (dg.Edit(entity))
+                    HienThi_DG();
+                else
+                    MessageBox.Show("Sửa độc giả không thành công");
+            }
+            btn_enable(false);
+        }
+
+        private void Boqua_DG_Click(object sender, EventArgs e)
+        {
+            btn_enable(false);
+        }
+
+        private void Thoat_DG_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        private void searchtxt_KeyUp(object sender, KeyEventArgs e)
+        {
+            QuanLiThuVienHVKTQSDataContext db = new QuanLiThuVienHVKTQSDataContext();
+            int i = 1;
+            var lst = (from s in db.docgias where (s.sothe.ToString().Contains(searchtxt.Text) || s.hoten.ToString().Contains(searchtxt.Text)) select s).ToList();
+            listView_DG.Items.Clear();
+            foreach (docgia d in lst)
+            {
+                ListViewItem item = new ListViewItem();
+                item.Text = "" + i++;
+                item.SubItems.Add(d.sothe.ToString());
+                item.SubItems.Add(d.hoten.ToString());
+                item.SubItems.Add(d.ngaysinh.ToString());
+                item.SubItems.Add(d.ngaylamthe.ToString());
+
+                listView_DG.Items.Add(item);
+            }
+        }
+
 
 
 
