@@ -80,9 +80,9 @@
             this.groupdg_btn.Controls.Add(this.Sua_DG);
             this.groupdg_btn.Controls.Add(this.Them_DG);
             this.groupdg_btn.Location = new System.Drawing.Point(560, 597);
-            this.groupdg_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupdg_btn.Margin = new System.Windows.Forms.Padding(4);
             this.groupdg_btn.Name = "groupdg_btn";
-            this.groupdg_btn.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupdg_btn.Padding = new System.Windows.Forms.Padding(4);
             this.groupdg_btn.Size = new System.Drawing.Size(541, 66);
             this.groupdg_btn.TabIndex = 5;
             this.groupdg_btn.TabStop = false;
@@ -90,62 +90,68 @@
             // Thoat_DG
             // 
             this.Thoat_DG.Location = new System.Drawing.Point(452, 23);
-            this.Thoat_DG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Thoat_DG.Margin = new System.Windows.Forms.Padding(4);
             this.Thoat_DG.Name = "Thoat_DG";
             this.Thoat_DG.Size = new System.Drawing.Size(68, 28);
             this.Thoat_DG.TabIndex = 5;
             this.Thoat_DG.Text = "Thoát";
             this.Thoat_DG.UseVisualStyleBackColor = true;
+            this.Thoat_DG.Click += new System.EventHandler(this.Thoat_DG_Click);
             // 
             // Boqua_DG
             // 
             this.Boqua_DG.Location = new System.Drawing.Point(364, 23);
-            this.Boqua_DG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Boqua_DG.Margin = new System.Windows.Forms.Padding(4);
             this.Boqua_DG.Name = "Boqua_DG";
             this.Boqua_DG.Size = new System.Drawing.Size(80, 28);
             this.Boqua_DG.TabIndex = 4;
             this.Boqua_DG.Text = "Bỏ qua";
             this.Boqua_DG.UseVisualStyleBackColor = true;
+            this.Boqua_DG.Click += new System.EventHandler(this.Boqua_DG_Click);
             // 
             // Luu_DG
             // 
             this.Luu_DG.Location = new System.Drawing.Point(277, 23);
-            this.Luu_DG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Luu_DG.Margin = new System.Windows.Forms.Padding(4);
             this.Luu_DG.Name = "Luu_DG";
             this.Luu_DG.Size = new System.Drawing.Size(79, 28);
             this.Luu_DG.TabIndex = 3;
             this.Luu_DG.Text = "Lưu";
             this.Luu_DG.UseVisualStyleBackColor = true;
+            this.Luu_DG.Click += new System.EventHandler(this.Luu_DG_Click);
             // 
             // Xoa_DG
             // 
             this.Xoa_DG.Location = new System.Drawing.Point(189, 23);
-            this.Xoa_DG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Xoa_DG.Margin = new System.Windows.Forms.Padding(4);
             this.Xoa_DG.Name = "Xoa_DG";
             this.Xoa_DG.Size = new System.Drawing.Size(80, 28);
             this.Xoa_DG.TabIndex = 2;
             this.Xoa_DG.Text = "Xóa";
             this.Xoa_DG.UseVisualStyleBackColor = true;
+            this.Xoa_DG.Click += new System.EventHandler(this.Xoa_DG_Click);
             // 
             // Sua_DG
             // 
             this.Sua_DG.Location = new System.Drawing.Point(104, 23);
-            this.Sua_DG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Sua_DG.Margin = new System.Windows.Forms.Padding(4);
             this.Sua_DG.Name = "Sua_DG";
             this.Sua_DG.Size = new System.Drawing.Size(77, 28);
             this.Sua_DG.TabIndex = 1;
             this.Sua_DG.Text = "Sửa";
             this.Sua_DG.UseVisualStyleBackColor = true;
+            this.Sua_DG.Click += new System.EventHandler(this.Sua_DG_Click);
             // 
             // Them_DG
             // 
             this.Them_DG.Location = new System.Drawing.Point(19, 23);
-            this.Them_DG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Them_DG.Margin = new System.Windows.Forms.Padding(4);
             this.Them_DG.Name = "Them_DG";
             this.Them_DG.Size = new System.Drawing.Size(77, 28);
             this.Them_DG.TabIndex = 0;
             this.Them_DG.Text = "Thêm";
             this.Them_DG.UseVisualStyleBackColor = true;
+            this.Them_DG.Click += new System.EventHandler(this.Them_DG_Click);
             // 
             // groupDG
             // 
@@ -170,9 +176,9 @@
             this.groupDG.Controls.Add(this.label2);
             this.groupDG.Controls.Add(this.label1);
             this.groupDG.Location = new System.Drawing.Point(560, 107);
-            this.groupDG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupDG.Margin = new System.Windows.Forms.Padding(4);
             this.groupDG.Name = "groupDG";
-            this.groupDG.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupDG.Padding = new System.Windows.Forms.Padding(4);
             this.groupDG.Size = new System.Drawing.Size(541, 482);
             this.groupDG.TabIndex = 4;
             this.groupDG.TabStop = false;
@@ -182,7 +188,7 @@
             this.hanthedg.CustomFormat = "       dd/MM/yyyy";
             this.hanthedg.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.hanthedg.Location = new System.Drawing.Point(124, 404);
-            this.hanthedg.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.hanthedg.Margin = new System.Windows.Forms.Padding(4);
             this.hanthedg.Name = "hanthedg";
             this.hanthedg.Size = new System.Drawing.Size(168, 22);
             this.hanthedg.TabIndex = 31;
@@ -192,7 +198,7 @@
             this.ngaythedg.CustomFormat = "      dd/MM/yyyy";
             this.ngaythedg.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.ngaythedg.Location = new System.Drawing.Point(124, 356);
-            this.ngaythedg.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ngaythedg.Margin = new System.Windows.Forms.Padding(4);
             this.ngaythedg.Name = "ngaythedg";
             this.ngaythedg.Size = new System.Drawing.Size(168, 22);
             this.ngaythedg.TabIndex = 30;
@@ -202,7 +208,7 @@
             this.ngaysinhdg.CustomFormat = "      dd/MM/yyyy";
             this.ngaysinhdg.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.ngaysinhdg.Location = new System.Drawing.Point(124, 126);
-            this.ngaysinhdg.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ngaysinhdg.Margin = new System.Windows.Forms.Padding(4);
             this.ngaysinhdg.Name = "ngaysinhdg";
             this.ngaysinhdg.Size = new System.Drawing.Size(168, 22);
             this.ngaysinhdg.TabIndex = 29;
@@ -210,7 +216,7 @@
             // button7
             // 
             this.button7.Location = new System.Drawing.Point(405, 175);
-            this.button7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button7.Margin = new System.Windows.Forms.Padding(4);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(100, 28);
             this.button7.TabIndex = 28;
@@ -220,7 +226,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(385, 21);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(132, 143);
             this.pictureBox1.TabIndex = 27;
@@ -229,7 +235,7 @@
             // emaildgtxt
             // 
             this.emaildgtxt.Location = new System.Drawing.Point(124, 217);
-            this.emaildgtxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.emaildgtxt.Margin = new System.Windows.Forms.Padding(4);
             this.emaildgtxt.Name = "emaildgtxt";
             this.emaildgtxt.Size = new System.Drawing.Size(231, 22);
             this.emaildgtxt.TabIndex = 26;
@@ -247,7 +253,7 @@
             // gioitinhdgtxt
             // 
             this.gioitinhdgtxt.Location = new System.Drawing.Point(124, 171);
-            this.gioitinhdgtxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gioitinhdgtxt.Margin = new System.Windows.Forms.Padding(4);
             this.gioitinhdgtxt.Name = "gioitinhdgtxt";
             this.gioitinhdgtxt.Size = new System.Drawing.Size(83, 22);
             this.gioitinhdgtxt.TabIndex = 21;
@@ -255,7 +261,7 @@
             // socmtnddgtxt
             // 
             this.socmtnddgtxt.Location = new System.Drawing.Point(124, 313);
-            this.socmtnddgtxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.socmtnddgtxt.Margin = new System.Windows.Forms.Padding(4);
             this.socmtnddgtxt.Name = "socmtnddgtxt";
             this.socmtnddgtxt.Size = new System.Drawing.Size(231, 22);
             this.socmtnddgtxt.TabIndex = 18;
@@ -263,7 +269,7 @@
             // diachidgtxt
             // 
             this.diachidgtxt.Location = new System.Drawing.Point(124, 265);
-            this.diachidgtxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.diachidgtxt.Margin = new System.Windows.Forms.Padding(4);
             this.diachidgtxt.Name = "diachidgtxt";
             this.diachidgtxt.Size = new System.Drawing.Size(395, 22);
             this.diachidgtxt.TabIndex = 14;
@@ -271,7 +277,7 @@
             // tendgtxt
             // 
             this.tendgtxt.Location = new System.Drawing.Point(124, 78);
-            this.tendgtxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tendgtxt.Margin = new System.Windows.Forms.Padding(4);
             this.tendgtxt.Name = "tendgtxt";
             this.tendgtxt.Size = new System.Drawing.Size(231, 22);
             this.tendgtxt.TabIndex = 13;
@@ -279,7 +285,7 @@
             // sothetxt
             // 
             this.sothetxt.Location = new System.Drawing.Point(124, 30);
-            this.sothetxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sothetxt.Margin = new System.Windows.Forms.Padding(4);
             this.sothetxt.Name = "sothetxt";
             this.sothetxt.Size = new System.Drawing.Size(132, 22);
             this.sothetxt.TabIndex = 12;
@@ -376,7 +382,7 @@
             this.listView_DG.GridLines = true;
             this.listView_DG.HideSelection = false;
             this.listView_DG.Location = new System.Drawing.Point(15, 5);
-            this.listView_DG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listView_DG.Margin = new System.Windows.Forms.Padding(4);
             this.listView_DG.Name = "listView_DG";
             this.listView_DG.Size = new System.Drawing.Size(536, 658);
             this.listView_DG.TabIndex = 7;
@@ -412,19 +418,20 @@
             // searchtxt
             // 
             this.searchtxt.Location = new System.Drawing.Point(124, 41);
-            this.searchtxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.searchtxt.Margin = new System.Windows.Forms.Padding(4);
             this.searchtxt.Name = "searchtxt";
             this.searchtxt.Size = new System.Drawing.Size(215, 22);
             this.searchtxt.TabIndex = 8;
+            this.searchtxt.KeyUp += new System.Windows.Forms.KeyEventHandler(this.searchtxt_KeyUp);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.searchtxt);
             this.groupBox1.Location = new System.Drawing.Point(560, 5);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(540, 95);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
@@ -448,7 +455,7 @@
             this.Controls.Add(this.listView_DG);
             this.Controls.Add(this.groupdg_btn);
             this.Controls.Add(this.groupDG);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmDocGia";
             this.Text = "frmDocGia";
             this.groupdg_btn.ResumeLayout(false);
