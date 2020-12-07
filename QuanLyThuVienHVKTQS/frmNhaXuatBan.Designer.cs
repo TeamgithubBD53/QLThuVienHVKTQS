@@ -64,13 +64,15 @@
             this.columnHeader5});
             this.listView_NXB.FullRowSelect = true;
             this.listView_NXB.GridLines = true;
+            this.listView_NXB.HideSelection = false;
             this.listView_NXB.Location = new System.Drawing.Point(3, 1);
-            this.listView_NXB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listView_NXB.Margin = new System.Windows.Forms.Padding(4);
             this.listView_NXB.Name = "listView_NXB";
             this.listView_NXB.Size = new System.Drawing.Size(504, 446);
             this.listView_NXB.TabIndex = 0;
             this.listView_NXB.UseCompatibleStateImageBehavior = false;
             this.listView_NXB.View = System.Windows.Forms.View.Details;
+            this.listView_NXB.SelectedIndexChanged += new System.EventHandler(this.ListView_NXB_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -148,9 +150,9 @@
             this.group_NXB.Controls.Add(this.label2);
             this.group_NXB.Controls.Add(this.label3);
             this.group_NXB.Location = new System.Drawing.Point(508, 1);
-            this.group_NXB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.group_NXB.Margin = new System.Windows.Forms.Padding(4);
             this.group_NXB.Name = "group_NXB";
-            this.group_NXB.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.group_NXB.Padding = new System.Windows.Forms.Padding(4);
             this.group_NXB.Size = new System.Drawing.Size(412, 299);
             this.group_NXB.TabIndex = 5;
             this.group_NXB.TabStop = false;
@@ -158,7 +160,7 @@
             // sdtnxbtxt
             // 
             this.sdtnxbtxt.Location = new System.Drawing.Point(123, 174);
-            this.sdtnxbtxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sdtnxbtxt.Margin = new System.Windows.Forms.Padding(4);
             this.sdtnxbtxt.Name = "sdtnxbtxt";
             this.sdtnxbtxt.Size = new System.Drawing.Size(132, 22);
             this.sdtnxbtxt.TabIndex = 8;
@@ -166,7 +168,7 @@
             // diachinxbtxt
             // 
             this.diachinxbtxt.Location = new System.Drawing.Point(123, 126);
-            this.diachinxbtxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.diachinxbtxt.Margin = new System.Windows.Forms.Padding(4);
             this.diachinxbtxt.Name = "diachinxbtxt";
             this.diachinxbtxt.Size = new System.Drawing.Size(132, 22);
             this.diachinxbtxt.TabIndex = 7;
@@ -174,7 +176,7 @@
             // tennxbtxt
             // 
             this.tennxbtxt.Location = new System.Drawing.Point(123, 79);
-            this.tennxbtxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tennxbtxt.Margin = new System.Windows.Forms.Padding(4);
             this.tennxbtxt.Name = "tennxbtxt";
             this.tennxbtxt.Size = new System.Drawing.Size(132, 22);
             this.tennxbtxt.TabIndex = 6;
@@ -182,7 +184,7 @@
             // manxbtxt
             // 
             this.manxbtxt.Location = new System.Drawing.Point(123, 30);
-            this.manxbtxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.manxbtxt.Margin = new System.Windows.Forms.Padding(4);
             this.manxbtxt.Name = "manxbtxt";
             this.manxbtxt.Size = new System.Drawing.Size(132, 22);
             this.manxbtxt.TabIndex = 5;
@@ -196,9 +198,9 @@
             this.groupnxb_btn.Controls.Add(this.Sua_NXB);
             this.groupnxb_btn.Controls.Add(this.Them_NXB);
             this.groupnxb_btn.Location = new System.Drawing.Point(508, 308);
-            this.groupnxb_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupnxb_btn.Margin = new System.Windows.Forms.Padding(4);
             this.groupnxb_btn.Name = "groupnxb_btn";
-            this.groupnxb_btn.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupnxb_btn.Padding = new System.Windows.Forms.Padding(4);
             this.groupnxb_btn.Size = new System.Drawing.Size(412, 140);
             this.groupnxb_btn.TabIndex = 6;
             this.groupnxb_btn.TabStop = false;
@@ -206,37 +208,40 @@
             // Thoat_NXB
             // 
             this.Thoat_NXB.Location = new System.Drawing.Point(283, 89);
-            this.Thoat_NXB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Thoat_NXB.Margin = new System.Windows.Forms.Padding(4);
             this.Thoat_NXB.Name = "Thoat_NXB";
             this.Thoat_NXB.Size = new System.Drawing.Size(100, 28);
             this.Thoat_NXB.TabIndex = 5;
             this.Thoat_NXB.Text = "Thoát";
             this.Thoat_NXB.UseVisualStyleBackColor = true;
+            this.Thoat_NXB.Click += new System.EventHandler(this.Thoat_NXB_Click);
             // 
             // Boqua_NXB
             // 
             this.Boqua_NXB.Location = new System.Drawing.Point(141, 89);
-            this.Boqua_NXB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Boqua_NXB.Margin = new System.Windows.Forms.Padding(4);
             this.Boqua_NXB.Name = "Boqua_NXB";
             this.Boqua_NXB.Size = new System.Drawing.Size(100, 28);
             this.Boqua_NXB.TabIndex = 4;
             this.Boqua_NXB.Text = "Bỏ qua";
             this.Boqua_NXB.UseVisualStyleBackColor = true;
+            this.Boqua_NXB.Click += new System.EventHandler(this.Boqua_NXB_Click);
             // 
             // Luu_NXB
             // 
             this.Luu_NXB.Location = new System.Drawing.Point(8, 89);
-            this.Luu_NXB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Luu_NXB.Margin = new System.Windows.Forms.Padding(4);
             this.Luu_NXB.Name = "Luu_NXB";
             this.Luu_NXB.Size = new System.Drawing.Size(100, 28);
             this.Luu_NXB.TabIndex = 3;
             this.Luu_NXB.Text = "Lưu";
             this.Luu_NXB.UseVisualStyleBackColor = true;
+            this.Luu_NXB.Click += new System.EventHandler(this.Luu_NXB_Click);
             // 
             // Xoa_NXB
             // 
             this.Xoa_NXB.Location = new System.Drawing.Point(283, 23);
-            this.Xoa_NXB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Xoa_NXB.Margin = new System.Windows.Forms.Padding(4);
             this.Xoa_NXB.Name = "Xoa_NXB";
             this.Xoa_NXB.Size = new System.Drawing.Size(100, 28);
             this.Xoa_NXB.TabIndex = 2;
@@ -247,7 +252,7 @@
             // Sua_NXB
             // 
             this.Sua_NXB.Location = new System.Drawing.Point(141, 23);
-            this.Sua_NXB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Sua_NXB.Margin = new System.Windows.Forms.Padding(4);
             this.Sua_NXB.Name = "Sua_NXB";
             this.Sua_NXB.Size = new System.Drawing.Size(100, 28);
             this.Sua_NXB.TabIndex = 1;
@@ -258,7 +263,7 @@
             // Them_NXB
             // 
             this.Them_NXB.Location = new System.Drawing.Point(8, 23);
-            this.Them_NXB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Them_NXB.Margin = new System.Windows.Forms.Padding(4);
             this.Them_NXB.Name = "Them_NXB";
             this.Them_NXB.Size = new System.Drawing.Size(100, 28);
             this.Them_NXB.TabIndex = 0;
@@ -274,7 +279,7 @@
             this.Controls.Add(this.groupnxb_btn);
             this.Controls.Add(this.group_NXB);
             this.Controls.Add(this.listView_NXB);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmNhaXuatBan";
             this.Text = "frmNhaXuatBan";
             this.group_NXB.ResumeLayout(false);

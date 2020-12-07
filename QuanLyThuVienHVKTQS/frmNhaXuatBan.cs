@@ -62,17 +62,90 @@ namespace QuanLyThuVienHVKTQS
 
         private void Them_NXB_Click(object sender, EventArgs e)
         {
-
+            manxbtxt.Text = "";
+            tennxbtxt.Text = "";
+            diachinxbtxt.Text = "";
+            sdtnxbtxt.Text = "";
+            btn_enable(true);
+            Them_bool = true;
         }
 
         private void Sua_NXB_Click(object sender, EventArgs e)
         {
-
+            btn_enable(true);
+            Sua_bool = true;
         }
 
         private void Xoa_NXB_Click(object sender, EventArgs e)
         {
+            DialogResult result = MessageBox.Show("Bạn có muốn xóa?", "delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+            if (result == DialogResult.Yes)
+            {
+                int id = Convert.ToInt32(manxbtxt.Text);
+                var entity = new NhaXuatBanController();
+                if (entity.Delete(id))
+                    HienThi_NXB();
+                else
+                {
+                    MessageBox.Show("Không xóa được");
+                }
+            }
+        }
 
+        private void ListView_NXB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listView_NXB.SelectedItems.Count == 0) return;
+            int id = Convert.ToInt32(listView_NXB.SelectedItems[0].SubItems[1].Text);
+            int index = l.FindIndex(m => m.manxb == id);
+
+            manxbtxt.Text = l[index].manxb.ToString();
+            tennxbtxt.Text = l[index].tennxb.ToString();
+            if (l[index].diachi == null) diachinxbtxt.Text = "";
+            else diachinxbtxt.Text = l[index].diachi.ToString();
+            if (l[index].sdt == null) sdtnxbtxt.Text = "";
+            else sdtnxbtxt.Text = l[index].sdt.ToString();
+        }
+
+        private void Luu_NXB_Click(object sender, EventArgs e)
+        {
+            if (Them_bool == true && Sua_bool == false)
+            {
+                var nxb = new nhaxuatban();
+                nxb.tennxb = tennxbtxt.Text;
+                nxb.diachi = diachinxbtxt.Text;
+                nxb.sdt = sdtnxbtxt.Text;
+
+                var entity = new NhaXuatBanController();
+                if (entity.Add(nxb) > 0)
+                    HienThi_NXB();
+                else
+                    MessageBox.Show("Thêm không thành công");
+            }
+            if (Them_bool == false && Sua_bool == true)
+            {
+                var nxb = new nhaxuatban();
+                nxb.tennxb = tennxbtxt.Text;
+                nxb.diachi = diachinxbtxt.Text;
+                nxb.sdt = sdtnxbtxt.Text;
+
+                var entity = new NhaXuatBanController();
+                if (entity.Edit(nxb))
+                    HienThi_NXB();
+                else
+                    MessageBox.Show("Sửa không thành công");
+
+            }
+            btn_enable(false);
+        }
+
+        private void Boqua_NXB_Click(object sender, EventArgs e)
+        {
+            btn_enable(true);
+        }
+
+        private void Thoat_NXB_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
