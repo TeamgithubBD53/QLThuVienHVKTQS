@@ -96,6 +96,7 @@
             this.btnThoat.TabIndex = 5;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnBoQua
             // 
@@ -106,6 +107,7 @@
             this.btnBoQua.TabIndex = 4;
             this.btnBoQua.Text = "Bỏ qua";
             this.btnBoQua.UseVisualStyleBackColor = true;
+            this.btnBoQua.Click += new System.EventHandler(this.btnBoQua_Click);
             // 
             // btnLuuSach
             // 
@@ -116,6 +118,7 @@
             this.btnLuuSach.TabIndex = 3;
             this.btnLuuSach.Text = "Lưu";
             this.btnLuuSach.UseVisualStyleBackColor = true;
+            this.btnLuuSach.Click += new System.EventHandler(this.btnLuuSach_Click);
             // 
             // btnXoaSach
             // 
