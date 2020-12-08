@@ -126,6 +126,7 @@
             this.btnXoaSach.TabIndex = 2;
             this.btnXoaSach.Text = "Xóa";
             this.btnXoaSach.UseVisualStyleBackColor = true;
+            this.btnXoaSach.Click += new System.EventHandler(this.btnXoaSach_Click);
             // 
             // btnSuaSach
             // 
@@ -136,6 +137,7 @@
             this.btnSuaSach.TabIndex = 1;
             this.btnSuaSach.Text = "Sửa";
             this.btnSuaSach.UseVisualStyleBackColor = true;
+            this.btnSuaSach.Click += new System.EventHandler(this.btnSuaSach_Click);
             // 
             // btnThemSach
             // 

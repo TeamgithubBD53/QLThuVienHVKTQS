@@ -88,7 +88,40 @@ namespace QuanLyThuVienHVKTQS
 
         private void btnThemSach_Click(object sender, EventArgs e)
         {
-          
+            btn_edit(true);
+            txtMaSach.Text = "";
+            txtTenSach.Text = "";
+            txtTacGia.Text = "";
+            //txtNXB.Text = "";
+            txtNamXB.Text = "";
+            txtSoTrang.Text = "";
+            txtGiaTien.Text = "";
+            txtSoLuong.Text = "";
+            txtNgonNgu.Text = "";
+            txtTheLoai.Text = "";
+            this.Them_bool = true;
+        }
+
+        private void btnSuaSach_Click(object sender, EventArgs e)
+        {
+            btn_edit(true);
+            this.Sua_bool = true;
+        }
+
+        private void btnXoaSach_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("ban co thuc su muon xoa?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+            if (result == DialogResult.Yes)
+            {
+                int masach = Convert.ToInt32(txtMaSach.Text);
+                var s = new SachController();
+                if (s.Del(masach))
+                    HienThiSach();
+                else
+                {
+                    MessageBox.Show("khong xoa duoc!");
+                }
+            }
         }
     }
 }
