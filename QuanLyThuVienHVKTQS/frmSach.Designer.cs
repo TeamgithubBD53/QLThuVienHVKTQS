@@ -146,6 +146,7 @@
             this.btnThemSach.TabIndex = 0;
             this.btnThemSach.Text = "Thêm";
             this.btnThemSach.UseVisualStyleBackColor = true;
+            this.btnThemSach.Click += new System.EventHandler(this.btnThemSach_Click);
             // 
             // lvSach
             // 
