@@ -39,7 +39,6 @@
             this.hanthedg = new System.Windows.Forms.DateTimePicker();
             this.ngaythedg = new System.Windows.Forms.DateTimePicker();
             this.ngaysinhdg = new System.Windows.Forms.DateTimePicker();
-            this.button7 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.emaildgtxt = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -158,7 +157,6 @@
             this.groupDG.Controls.Add(this.hanthedg);
             this.groupDG.Controls.Add(this.ngaythedg);
             this.groupDG.Controls.Add(this.ngaysinhdg);
-            this.groupDG.Controls.Add(this.button7);
             this.groupDG.Controls.Add(this.pictureBox1);
             this.groupDG.Controls.Add(this.emaildgtxt);
             this.groupDG.Controls.Add(this.label6);
@@ -212,16 +210,6 @@
             this.ngaysinhdg.Name = "ngaysinhdg";
             this.ngaysinhdg.Size = new System.Drawing.Size(168, 22);
             this.ngaysinhdg.TabIndex = 29;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(405, 175);
-            this.button7.Margin = new System.Windows.Forms.Padding(4);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(100, 28);
-            this.button7.TabIndex = 28;
-            this.button7.Text = "ảnh mới";
-            this.button7.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
@@ -494,7 +482,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox emaildgtxt;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.ListView listView_DG;
         private System.Windows.Forms.ColumnHeader STT;
         private System.Windows.Forms.ColumnHeader columnHeader1;
