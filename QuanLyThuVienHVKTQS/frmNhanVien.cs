@@ -97,5 +97,90 @@ namespace QuanLyThuVienHVKTQS
             if (l[index].quyenhan == null) quyenhantxt.Text = "";
             else quyenhantxt.Text = l[index].quyenhan.ToString();
         }
+
+        private void Thoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void SuaNV_Click(object sender, EventArgs e)
+        {
+            btn_edit(true);
+            Sua_bool = true;
+        }
+
+        private void ThemNV_Click(object sender, EventArgs e)
+        {
+            btn_edit(true);
+            manvtxt.Text = "";
+            tennvtxt.Text = "";
+            gioitinhtxt.Text = "";
+            sdttxt.Text = "";
+            diachitxt.Text = "";
+            socmtndtxt.Text = "";
+            quyenhantxt.Text = "";
+            this.Them_bool = true;
+        }
+
+        private void XoaNV_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có muốn xóa nhân viên này?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+            if (result == DialogResult.Yes)
+            {
+                int id = Convert.ToInt32(manvtxt.Text);
+                var entity = new NhanVienController();
+                if (entity.delete(id))
+                    HienthiNV();
+                else
+                    MessageBox.Show("Không xóa được!");
+            }
+        }
+
+        private void LuuNV_Click(object sender, EventArgs e)
+        {
+            if (Them_bool == true && Sua_bool == false)
+            {
+                var entity = new nhanvien();
+
+                entity.tennv = tennvtxt.Text;
+                entity.ngaysinh = ngaysinhnv.Value;
+                entity.gioitinh = gioitinhtxt.Text;
+                entity.sdt = sdttxt.Text;
+                entity.diachi = diachitxt.Text;
+                entity.socmtnd = socmtndtxt.Text;
+                entity.quyenhan = quyenhantxt.Text;
+
+                var nv = new NhanVienController();
+                int t = nv.Add(entity);
+                if (t > 0)
+                    HienthiNV();
+                else
+                    MessageBox.Show("Thêm nhân viên lỗi!");
+            }
+            if (Them_bool == false && Sua_bool == true)
+            {
+                var entity = new nhanvien();
+                entity.manv = Convert.ToInt32(manvtxt.Text);
+                entity.tennv = tennvtxt.Text;
+                entity.ngaysinh = ngaysinhnv.Value;
+                entity.gioitinh = gioitinhtxt.Text;
+                entity.sdt = sdttxt.Text;
+                entity.diachi = diachitxt.Text;
+                entity.socmtnd = socmtndtxt.Text;
+                entity.quyenhan = quyenhantxt.Text;
+
+                var nv = new NhanVienController();
+                if (nv.edit(entity))
+                    HienthiNV();
+                else
+                    MessageBox.Show("Sửa lỗi!");
+            }
+            btn_edit(false);
+        }
+
+        private void BoquaNV_Click(object sender, EventArgs e)
+        {
+            btn_edit(false);
+        }
     }
 }

@@ -92,6 +92,7 @@
             this.Thoat.TabIndex = 5;
             this.Thoat.Text = "Thoát";
             this.Thoat.UseVisualStyleBackColor = true;
+            this.Thoat.Click += new System.EventHandler(this.Thoat_Click);
             // 
             // BoquaNV
             // 
@@ -102,6 +103,7 @@
             this.BoquaNV.TabIndex = 4;
             this.BoquaNV.Text = "Bỏ qua";
             this.BoquaNV.UseVisualStyleBackColor = true;
+            this.BoquaNV.Click += new System.EventHandler(this.BoquaNV_Click);
             // 
             // LuuNV
             // 
@@ -112,6 +114,7 @@
             this.LuuNV.TabIndex = 3;
             this.LuuNV.Text = "Lưu";
             this.LuuNV.UseVisualStyleBackColor = true;
+            this.LuuNV.Click += new System.EventHandler(this.LuuNV_Click);
             // 
             // XoaNV
             // 
@@ -122,6 +125,7 @@
             this.XoaNV.TabIndex = 2;
             this.XoaNV.Text = "Xóa";
             this.XoaNV.UseVisualStyleBackColor = true;
+            this.XoaNV.Click += new System.EventHandler(this.XoaNV_Click);
             // 
             // SuaNV
             // 
@@ -132,6 +136,7 @@
             this.SuaNV.TabIndex = 1;
             this.SuaNV.Text = "Sửa";
             this.SuaNV.UseVisualStyleBackColor = true;
+            this.SuaNV.Click += new System.EventHandler(this.SuaNV_Click);
             // 
             // ThemNV
             // 
@@ -142,6 +147,7 @@
             this.ThemNV.TabIndex = 0;
             this.ThemNV.Text = "Thêm";
             this.ThemNV.UseVisualStyleBackColor = true;
+            this.ThemNV.Click += new System.EventHandler(this.ThemNV_Click);
             // 
             // groupedit_NV
             // 
@@ -181,7 +187,7 @@
             this.ngaysinhnv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ngaysinhnv.Name = "ngaysinhnv";
             this.ngaysinhnv.Size = new System.Drawing.Size(252, 22);
-            this.ngaysinhnv.TabIndex = 29;
+            this.ngaysinhnv.TabIndex = 2;
             // 
             // anhmoinvbtn
             // 
@@ -189,7 +195,7 @@
             this.anhmoinvbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.anhmoinvbtn.Name = "anhmoinvbtn";
             this.anhmoinvbtn.Size = new System.Drawing.Size(100, 28);
-            this.anhmoinvbtn.TabIndex = 28;
+            this.anhmoinvbtn.TabIndex = 9;
             this.anhmoinvbtn.Text = "ảnh mới";
             this.anhmoinvbtn.UseVisualStyleBackColor = true;
             // 
@@ -208,7 +214,7 @@
             this.sdttxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.sdttxt.Name = "sdttxt";
             this.sdttxt.Size = new System.Drawing.Size(231, 22);
-            this.sdttxt.TabIndex = 26;
+            this.sdttxt.TabIndex = 4;
             // 
             // label6
             // 
@@ -237,7 +243,7 @@
             this.ghichutxt.Multiline = true;
             this.ghichutxt.Name = "ghichutxt";
             this.ghichutxt.Size = new System.Drawing.Size(477, 89);
-            this.ghichutxt.TabIndex = 23;
+            this.ghichutxt.TabIndex = 8;
             // 
             // gioitinhtxt
             // 
@@ -245,7 +251,7 @@
             this.gioitinhtxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gioitinhtxt.Name = "gioitinhtxt";
             this.gioitinhtxt.Size = new System.Drawing.Size(83, 22);
-            this.gioitinhtxt.TabIndex = 21;
+            this.gioitinhtxt.TabIndex = 3;
             // 
             // socmtndtxt
             // 
@@ -253,7 +259,7 @@
             this.socmtndtxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.socmtndtxt.Name = "socmtndtxt";
             this.socmtndtxt.Size = new System.Drawing.Size(231, 22);
-            this.socmtndtxt.TabIndex = 18;
+            this.socmtndtxt.TabIndex = 6;
             // 
             // quyenhantxt
             // 
@@ -261,7 +267,7 @@
             this.quyenhantxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.quyenhantxt.Name = "quyenhantxt";
             this.quyenhantxt.Size = new System.Drawing.Size(231, 22);
-            this.quyenhantxt.TabIndex = 16;
+            this.quyenhantxt.TabIndex = 7;
             // 
             // diachitxt
             // 
@@ -269,7 +275,7 @@
             this.diachitxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.diachitxt.Name = "diachitxt";
             this.diachitxt.Size = new System.Drawing.Size(395, 22);
-            this.diachitxt.TabIndex = 14;
+            this.diachitxt.TabIndex = 5;
             // 
             // tennvtxt
             // 
@@ -277,7 +283,7 @@
             this.tennvtxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tennvtxt.Name = "tennvtxt";
             this.tennvtxt.Size = new System.Drawing.Size(231, 22);
-            this.tennvtxt.TabIndex = 13;
+            this.tennvtxt.TabIndex = 1;
             // 
             // manvtxt
             // 
@@ -285,7 +291,7 @@
             this.manvtxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.manvtxt.Name = "manvtxt";
             this.manvtxt.Size = new System.Drawing.Size(132, 22);
-            this.manvtxt.TabIndex = 12;
+            this.manvtxt.TabIndex = 0;
             // 
             // label9
             // 
@@ -414,6 +420,7 @@
             this.Controls.Add(this.listView_NV);
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmNhanVien";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmNhanVien";
             this.groupnv_btn.ResumeLayout(false);
             this.groupedit_NV.ResumeLayout(false);
