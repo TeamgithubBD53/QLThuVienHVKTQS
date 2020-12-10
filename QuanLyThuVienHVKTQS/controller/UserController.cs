@@ -32,13 +32,11 @@ namespace QuanLyThuVienHVKTQS.controller
                 return -1;
             }
         }
-
-        //Thêm user mới
         public int Add(User user)
         {
             try
             {
-                var result = db.Users.FirstOrDefault(m => m.UserName == user.UserName);
+                var result = db.Users.First(m => m.UserName == user.UserName);
                 if (result == null)
                 {
                     db.Users.InsertOnSubmit(user);
@@ -49,9 +47,24 @@ namespace QuanLyThuVienHVKTQS.controller
             }
             catch (Exception)
             {
-                return 0;   //Đăng kí ko thành công
+                return 0;
             }
         }
 
+        public bool Delete(int id)
+        {
+            try
+            {
+                var obj = db.Users.First(m => m.ID == id);
+                db.Users.DeleteOnSubmit(obj);
+                db.SubmitChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+                throw;
+            }
+        }
     }
 }
