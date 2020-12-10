@@ -18,6 +18,7 @@ namespace QuanLyThuVienHVKTQS
         public frmTTMuonSach()
         {
             InitializeComponent();
+            Hienthi_MS();
         }
 
         List<MuonSach> l = null;

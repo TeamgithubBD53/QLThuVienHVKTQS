@@ -82,7 +82,7 @@
             this.listView_MS.GridLines = true;
             this.listView_MS.HideSelection = false;
             this.listView_MS.Location = new System.Drawing.Point(3, 2);
-            this.listView_MS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listView_MS.Margin = new System.Windows.Forms.Padding(4);
             this.listView_MS.Name = "listView_MS";
             this.listView_MS.Size = new System.Drawing.Size(657, 541);
             this.listView_MS.TabIndex = 0;
@@ -93,17 +93,17 @@
             // STT
             // 
             this.STT.Text = "STT";
-            this.STT.Width = 38;
+            this.STT.Width = 46;
             // 
             // columnHeader1
             // 
             this.columnHeader1.Text = "Mã mượn";
-            this.columnHeader1.Width = 58;
+            this.columnHeader1.Width = 71;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Số thẻ";
-            this.columnHeader2.Width = 65;
+            this.columnHeader2.Width = 83;
             // 
             // columnHeader3
             // 
@@ -113,22 +113,22 @@
             // columnHeader4
             // 
             this.columnHeader4.Text = "Số lượng";
-            this.columnHeader4.Width = 55;
+            this.columnHeader4.Width = 68;
             // 
             // columnHeader5
             // 
             this.columnHeader5.Text = "Ngày mượn";
-            this.columnHeader5.Width = 85;
+            this.columnHeader5.Width = 112;
             // 
             // columnHeader6
             // 
             this.columnHeader6.Text = "Hạn trả";
-            this.columnHeader6.Width = 80;
+            this.columnHeader6.Width = 95;
             // 
             // columnHeader7
             // 
             this.columnHeader7.Text = "Mã nhân viên";
-            this.columnHeader7.Width = 78;
+            this.columnHeader7.Width = 91;
             // 
             // label1
             // 
@@ -157,9 +157,9 @@
             this.group_MS.Controls.Add(this.label2);
             this.group_MS.Controls.Add(this.label1);
             this.group_MS.Location = new System.Drawing.Point(665, 91);
-            this.group_MS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.group_MS.Margin = new System.Windows.Forms.Padding(4);
             this.group_MS.Name = "group_MS";
-            this.group_MS.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.group_MS.Padding = new System.Windows.Forms.Padding(4);
             this.group_MS.Size = new System.Drawing.Size(453, 379);
             this.group_MS.TabIndex = 2;
             this.group_MS.TabStop = false;
@@ -168,7 +168,7 @@
             // 
             this.manvcbx.FormattingEnabled = true;
             this.manvcbx.Location = new System.Drawing.Point(165, 298);
-            this.manvcbx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.manvcbx.Margin = new System.Windows.Forms.Padding(4);
             this.manvcbx.Name = "manvcbx";
             this.manvcbx.Size = new System.Drawing.Size(167, 24);
             this.manvcbx.TabIndex = 16;
@@ -187,7 +187,7 @@
             // 
             this.masachcbx.FormattingEnabled = true;
             this.masachcbx.Location = new System.Drawing.Point(165, 105);
-            this.masachcbx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.masachcbx.Margin = new System.Windows.Forms.Padding(4);
             this.masachcbx.Name = "masachcbx";
             this.masachcbx.Size = new System.Drawing.Size(167, 24);
             this.masachcbx.TabIndex = 14;
@@ -196,7 +196,7 @@
             // 
             this.sothecbx.FormattingEnabled = true;
             this.sothecbx.Location = new System.Drawing.Point(165, 63);
-            this.sothecbx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sothecbx.Margin = new System.Windows.Forms.Padding(4);
             this.sothecbx.Name = "sothecbx";
             this.sothecbx.Size = new System.Drawing.Size(167, 24);
             this.sothecbx.TabIndex = 13;
@@ -206,7 +206,7 @@
             this.hantra.CustomFormat = "       dd/MM/yyyy";
             this.hantra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.hantra.Location = new System.Drawing.Point(165, 256);
-            this.hantra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.hantra.Margin = new System.Windows.Forms.Padding(4);
             this.hantra.Name = "hantra";
             this.hantra.Size = new System.Drawing.Size(167, 22);
             this.hantra.TabIndex = 12;
@@ -216,7 +216,7 @@
             this.ngaymuon.CustomFormat = "       dd/MM/yyyy";
             this.ngaymuon.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.ngaymuon.Location = new System.Drawing.Point(165, 208);
-            this.ngaymuon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ngaymuon.Margin = new System.Windows.Forms.Padding(4);
             this.ngaymuon.Name = "ngaymuon";
             this.ngaymuon.Size = new System.Drawing.Size(167, 22);
             this.ngaymuon.TabIndex = 11;
@@ -224,7 +224,7 @@
             // soluongtxt
             // 
             this.soluongtxt.Location = new System.Drawing.Point(165, 155);
-            this.soluongtxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.soluongtxt.Margin = new System.Windows.Forms.Padding(4);
             this.soluongtxt.Name = "soluongtxt";
             this.soluongtxt.Size = new System.Drawing.Size(167, 22);
             this.soluongtxt.TabIndex = 10;
@@ -232,7 +232,7 @@
             // mamuontxt
             // 
             this.mamuontxt.Location = new System.Drawing.Point(165, 16);
-            this.mamuontxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mamuontxt.Margin = new System.Windows.Forms.Padding(4);
             this.mamuontxt.Name = "mamuontxt";
             this.mamuontxt.Size = new System.Drawing.Size(167, 22);
             this.mamuontxt.TabIndex = 7;
@@ -296,9 +296,9 @@
             this.groupms_btn.Controls.Add(this.Sua_MS);
             this.groupms_btn.Controls.Add(this.Them_MS);
             this.groupms_btn.Location = new System.Drawing.Point(665, 478);
-            this.groupms_btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupms_btn.Margin = new System.Windows.Forms.Padding(4);
             this.groupms_btn.Name = "groupms_btn";
-            this.groupms_btn.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupms_btn.Padding = new System.Windows.Forms.Padding(4);
             this.groupms_btn.Size = new System.Drawing.Size(461, 66);
             this.groupms_btn.TabIndex = 3;
             this.groupms_btn.TabStop = false;
@@ -306,7 +306,7 @@
             // Thoat_MS
             // 
             this.Thoat_MS.Location = new System.Drawing.Point(384, 23);
-            this.Thoat_MS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Thoat_MS.Margin = new System.Windows.Forms.Padding(4);
             this.Thoat_MS.Name = "Thoat_MS";
             this.Thoat_MS.Size = new System.Drawing.Size(64, 28);
             this.Thoat_MS.TabIndex = 5;
@@ -317,7 +317,7 @@
             // Boqua_MS
             // 
             this.Boqua_MS.Location = new System.Drawing.Point(307, 23);
-            this.Boqua_MS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Boqua_MS.Margin = new System.Windows.Forms.Padding(4);
             this.Boqua_MS.Name = "Boqua_MS";
             this.Boqua_MS.Size = new System.Drawing.Size(69, 28);
             this.Boqua_MS.TabIndex = 4;
@@ -328,7 +328,7 @@
             // Luu_MS
             // 
             this.Luu_MS.Location = new System.Drawing.Point(237, 23);
-            this.Luu_MS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Luu_MS.Margin = new System.Windows.Forms.Padding(4);
             this.Luu_MS.Name = "Luu_MS";
             this.Luu_MS.Size = new System.Drawing.Size(61, 28);
             this.Luu_MS.TabIndex = 3;
@@ -339,7 +339,7 @@
             // Xoa_MS
             // 
             this.Xoa_MS.Location = new System.Drawing.Point(160, 23);
-            this.Xoa_MS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Xoa_MS.Margin = new System.Windows.Forms.Padding(4);
             this.Xoa_MS.Name = "Xoa_MS";
             this.Xoa_MS.Size = new System.Drawing.Size(69, 28);
             this.Xoa_MS.TabIndex = 2;
@@ -350,7 +350,7 @@
             // Sua_MS
             // 
             this.Sua_MS.Location = new System.Drawing.Point(84, 23);
-            this.Sua_MS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Sua_MS.Margin = new System.Windows.Forms.Padding(4);
             this.Sua_MS.Name = "Sua_MS";
             this.Sua_MS.Size = new System.Drawing.Size(68, 28);
             this.Sua_MS.TabIndex = 1;
@@ -361,7 +361,7 @@
             // Them_MS
             // 
             this.Them_MS.Location = new System.Drawing.Point(15, 23);
-            this.Them_MS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Them_MS.Margin = new System.Windows.Forms.Padding(4);
             this.Them_MS.Name = "Them_MS";
             this.Them_MS.Size = new System.Drawing.Size(61, 28);
             this.Them_MS.TabIndex = 0;
@@ -374,9 +374,9 @@
             this.groupBox1.Controls.Add(this.search_MStxt);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Location = new System.Drawing.Point(665, 4);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(453, 80);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
@@ -384,7 +384,7 @@
             // search_MStxt
             // 
             this.search_MStxt.Location = new System.Drawing.Point(165, 33);
-            this.search_MStxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.search_MStxt.Margin = new System.Windows.Forms.Padding(4);
             this.search_MStxt.Name = "search_MStxt";
             this.search_MStxt.Size = new System.Drawing.Size(180, 22);
             this.search_MStxt.TabIndex = 1;
@@ -409,7 +409,7 @@
             this.Controls.Add(this.groupms_btn);
             this.Controls.Add(this.group_MS);
             this.Controls.Add(this.listView_MS);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmTTMuonSach";
             this.Text = "frmTTMuonSach";
             this.group_MS.ResumeLayout(false);
