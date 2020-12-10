@@ -65,5 +65,35 @@ namespace QuanLyThuVienHVKTQS
             passwordtxt.Text = l[index].Password.ToString();
             isadmincbx.Text = l[index].IsAdmin.ToString();
         }
+
+        private void Them_userbtn_Click(object sender, EventArgs e)
+        {
+            btn_enable(true);
+            IDtxt.Text = "";
+            usernametxt.Text = "";
+            passwordtxt.Text = "";
+            isadmincbx.Text = "false";
+            Them_bool = true;
+        }
+
+        private void Sua_userbtn_Click(object sender, EventArgs e)
+        {
+            btn_enable(true);
+            Sua_bool = true;
+        }
+
+        private void xoa_userbtn_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có muốn xóa người dùng này?", "delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+            if (result == DialogResult.Yes)
+            {
+                int id = Convert.ToInt32(IDtxt.Text);
+                var entity = new UserController();
+                if (entity.Delete(id))
+                    HienThi_User();
+                else
+                    MessageBox.Show("Xóa người dùng không thành công");
+            }
+        }
     }
 }
