@@ -18,6 +18,7 @@ namespace QuanLyThuVienHVKTQS.controller
             var list = db.saches.ToList();
             return list;
         }
+
         public int Add(sach entity)
         {
             try
