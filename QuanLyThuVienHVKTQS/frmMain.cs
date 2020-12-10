@@ -130,7 +130,14 @@ namespace QuanLyThuVienHVKTQS
             
         }
 
-        
+       
+
+        //Thoat chương trình
+        private void thoatChươngTrinhToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void danhMucĐôcGiaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ShowDG();
@@ -159,6 +166,37 @@ namespace QuanLyThuVienHVKTQS
             Show_Sach();
         }
 
+        //Đăng ký
+        private void dangkybtn_Click(object sender, EventArgs e)
+        {
+            var entity = new User();
+            entity.UserName = usernametxt.Text;
+            entity.Password = passwordtxt.Text;
+            entity.ID = 1;
+            entity.IsAdmin = false;
+            var s = new UserController();
+            var result = s.Add(entity);
+            if (result > 0)
+            {
+                MessageBox.Show("Đăng ký thành công");
+            }
+            else if (result == -1)
+            {
+                MessageBox.Show("Tên tài khoản đã tồn tại!");
+            }
+            else
+            {
+                MessageBox.Show("Đăng ký không thành công ");
+            }
+        }
 
+        //Dăng xuất
+        private void đăngXuâtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            usernametxt.Text = "";
+            passwordtxt.Text = "";
+            PhanQuyen.quyen = -1;
+            Load_Main();
+        }
     }
 }

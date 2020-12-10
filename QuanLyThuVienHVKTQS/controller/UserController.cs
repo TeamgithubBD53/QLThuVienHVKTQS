@@ -33,5 +33,25 @@ namespace QuanLyThuVienHVKTQS.controller
             }
         }
 
+        //Thêm user mới
+        public int Add(User user)
+        {
+            try
+            {
+                var result = db.Users.FirstOrDefault(m => m.UserName == user.UserName);
+                if (result == null)
+                {
+                    db.Users.InsertOnSubmit(user);
+                    db.SubmitChanges();
+                    return user.ID + 1;
+                }
+                else return -1;
+            }
+            catch (Exception)
+            {
+                return 0;   //Đăng kí ko thành công
+            }
+        }
+
     }
 }
