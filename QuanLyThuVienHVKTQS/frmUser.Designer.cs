@@ -82,7 +82,7 @@
             this.quanLiDanhMucToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(779, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(779, 30);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -363,6 +363,7 @@
             this.luu_userbtn.TabIndex = 3;
             this.luu_userbtn.Text = "Lưu";
             this.luu_userbtn.UseVisualStyleBackColor = true;
+            this.luu_userbtn.Click += new System.EventHandler(this.luu_userbtn_Click);
             // 
             // xoa_userbtn
             // 

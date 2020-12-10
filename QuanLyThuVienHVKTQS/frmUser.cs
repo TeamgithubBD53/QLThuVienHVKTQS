@@ -95,5 +95,47 @@ namespace QuanLyThuVienHVKTQS
                     MessageBox.Show("Xóa người dùng không thành công");
             }
         }
+
+        private void luu_userbtn_Click(object sender, EventArgs e)
+        {
+            if (Them_bool == true && Sua_bool == false)
+            {
+                var user = new User();
+
+                user.UserName = usernametxt.Text;
+                user.Password = passwordtxt.Text;
+                user.IsAdmin = Convert.ToBoolean(isadmincbx.Text);
+
+                var entity = new UserController();
+                if (entity.Add(user) > 0)
+                {
+                    HienThi_User();
+                }
+                else if (entity.Add(user) == -1)
+                {
+                    MessageBox.Show("Tên tài khoản đã tồn tại");
+                }
+                else
+                    MessageBox.Show("Thêm không thành công");
+            }
+            else if (Them_bool == false && Sua_bool == true)
+            {
+                var user = new User();
+                user.ID = Convert.ToInt32(IDtxt.Text);
+                user.UserName = usernametxt.Text;
+                user.Password = passwordtxt.Text;
+                user.IsAdmin = Convert.ToBoolean(isadmincbx.Text);
+
+                var entity = new UserController();
+                if (entity.Edit(user))
+                {
+
+                    HienThi_User();
+                }
+                else
+                    MessageBox.Show("Thêm không thành công");
+            }
+            btn_enable(false);
+        }
     }
 }
