@@ -343,6 +343,7 @@
             this.thoat_userbtn.TabIndex = 5;
             this.thoat_userbtn.Text = "Thoát";
             this.thoat_userbtn.UseVisualStyleBackColor = true;
+            this.thoat_userbtn.Click += new System.EventHandler(this.thoat_userbtn_Click);
             // 
             // boqua_userbtn
             // 
@@ -353,6 +354,7 @@
             this.boqua_userbtn.TabIndex = 4;
             this.boqua_userbtn.Text = "Bỏ qua";
             this.boqua_userbtn.UseVisualStyleBackColor = true;
+            this.boqua_userbtn.Click += new System.EventHandler(this.boqua_userbtn_Click);
             // 
             // luu_userbtn
             // 
@@ -427,6 +429,7 @@
             this.search_usertxt.Name = "search_usertxt";
             this.search_usertxt.Size = new System.Drawing.Size(155, 22);
             this.search_usertxt.TabIndex = 6;
+            this.search_usertxt.TextChanged += new System.EventHandler(this.search_usertxt_TextChanged);
             // 
             // frmUser
             // 
