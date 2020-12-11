@@ -137,5 +137,35 @@ namespace QuanLyThuVienHVKTQS
             }
             btn_enable(false);
         }
+
+        private void boqua_userbtn_Click(object sender, EventArgs e)
+        {
+            btn_enable(false);
+        }
+
+        private void thoat_userbtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void search_usertxt_TextChanged(object sender, EventArgs e)
+        {
+            QuanLiThuVienHVKTQSDataContext db = new QuanLiThuVienHVKTQSDataContext();
+            var list = (from u in db.Users where (u.ID.ToString().Contains(search_usertxt.Text) || u.UserName.ToString().Contains(search_usertxt.Text)) select u).ToList();
+            listView_User.Items.Clear();
+            int i = 1;
+            foreach (User u in list)
+            {
+                ListViewItem item = new ListViewItem();
+                item.Text = "" + i++;
+                item.SubItems.Add(u.ID.ToString());
+                item.SubItems.Add(u.UserName);
+                item.SubItems.Add(u.Password);
+                item.SubItems.Add(u.IsAdmin.ToString());
+
+                listView_User.Items.Add(item);
+
+            }
+        }
     }
 }
