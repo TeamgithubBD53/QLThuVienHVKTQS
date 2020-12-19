@@ -24,7 +24,9 @@ namespace QuanLyThuVienHVKTQS
         public void Load_Main()
         {
             quanLiDanhMucToolStripMenuItem.Enabled = false;
-            if(PhanQuyen.quyen==1)
+            hienPassword.Text = "Hiện";
+            passwordtxt.UseSystemPasswordChar = true;
+            if (PhanQuyen.quyen==1)
             {
                 quanLiDanhMucToolStripMenuItem.Enabled = true;
                 đăngXuâtToolStripMenuItem.Enabled = true;
@@ -40,8 +42,8 @@ namespace QuanLyThuVienHVKTQS
             {
                 quanLiDanhMucToolStripMenuItem.Enabled = true;
                 đăngXuâtToolStripMenuItem.Enabled = true;
-                danhMucĐôcGiaToolStripMenuItem.Enabled = true;
-                danhMucNhânViênToolStripMenuItem.Enabled = true;
+                danhMucĐôcGiaToolStripMenuItem.Enabled = false;
+                danhMucNhânViênToolStripMenuItem.Enabled = false;
                 danhMucNhaXuâtBanToolStripMenuItem.Enabled = true;
                 quanLiSachToolStripMenuItem.Enabled = true;
                 quảnLýMượntrảSáchToolStripMenuItem.Enabled = true;
@@ -52,6 +54,41 @@ namespace QuanLyThuVienHVKTQS
                 đăngXuâtToolStripMenuItem.Enabled = false;
                 quanLiDanhMucToolStripMenuItem.Enabled = false;
             }
+        }
+
+        //Ẩn username password khi đăng nhập thành công
+        public void DN_thanhcong()
+        {
+            label2.Enabled = false;
+            passwordtxt.Enabled = false;
+            passwordtxt.Text = "";
+            dangnhapbtn.Enabled = false;
+            dangnhapbtn.Enabled = false;
+            dangkybtn.Enabled = false;
+            hienPassword.Enabled = false;
+
+            if (PhanQuyen.quyen == 1)
+            {
+                this.Text = "Trang chủ Admin";
+            }
+            else if (PhanQuyen.quyen == 0)
+            {
+                this.Text = "Trang chủ User";
+            }
+        }
+
+        //Đăng nhập lại
+        public void DangNhanLai()
+        {
+            label2.Enabled = true;
+            passwordtxt.Enabled = true;
+            passwordtxt.Text = "";
+            dangnhapbtn.Enabled = true;
+            dangnhapbtn.Enabled = true;
+            dangkybtn.Enabled = true;
+            hienPassword.Enabled = true;
+            hienPassword.Text = "Hiện";
+            this.Text = "Trang chủ";
         }
         
         private void Show_NXB()
@@ -111,13 +148,14 @@ namespace QuanLyThuVienHVKTQS
                     MessageBox.Show("Đăng nhập thành công với quyền user");
                     PhanQuyen.quyen = 0;
                     Load_Main();
-
+                    DN_thanhcong();
                 }
                 else if (result == 1)
                 {
                     MessageBox.Show("Đăng nhập thành công với quyền admin");
                     PhanQuyen.quyen = 1;
                     Load_Main();
+                    DN_thanhcong();
                 }
             }
             catch(Exception)
@@ -130,7 +168,7 @@ namespace QuanLyThuVienHVKTQS
             
         }
 
-       
+
 
         //Thoat chương trình
         private void thoatChươngTrinhToolStripMenuItem_Click(object sender, EventArgs e)
@@ -197,6 +235,21 @@ namespace QuanLyThuVienHVKTQS
             passwordtxt.Text = "";
             PhanQuyen.quyen = -1;
             Load_Main();
+            DangNhanLai();
+        }
+
+        private void hienPassword_Click(object sender, EventArgs e)
+        {
+            if(hienPassword.Text == "Hiện")
+            {
+                hienPassword.Text = "Ẩn";
+                passwordtxt.UseSystemPasswordChar = false;
+            }    
+            else
+            {
+                hienPassword.Text = "Hiện";
+                passwordtxt.UseSystemPasswordChar = true;
+            }    
         }
     }
 }

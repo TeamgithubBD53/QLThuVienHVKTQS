@@ -51,6 +51,7 @@
             this.passwordtxt = new System.Windows.Forms.TextBox();
             this.dangnhapbtn = new System.Windows.Forms.Button();
             this.dangkybtn = new System.Windows.Forms.Button();
+            this.hienPassword = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -86,13 +87,14 @@
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(215, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(221, 6);
             // 
             // thoatChươngTrinhToolStripMenuItem
             // 
             this.thoatChươngTrinhToolStripMenuItem.Name = "thoatChươngTrinhToolStripMenuItem";
-            this.thoatChươngTrinhToolStripMenuItem.Size = new System.Drawing.Size(218, 26);
+            this.thoatChươngTrinhToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.thoatChươngTrinhToolStripMenuItem.Text = "Thoát chương trình";
+            this.thoatChươngTrinhToolStripMenuItem.Click += new System.EventHandler(this.thoatChươngTrinhToolStripMenuItem_Click);
             // 
             // quanLiDanhMucToolStripMenuItem
             // 
@@ -196,7 +198,7 @@
             // usernametxt
             // 
             this.usernametxt.Location = new System.Drawing.Point(320, 133);
-            this.usernametxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.usernametxt.Margin = new System.Windows.Forms.Padding(4);
             this.usernametxt.Name = "usernametxt";
             this.usernametxt.Size = new System.Drawing.Size(160, 22);
             this.usernametxt.TabIndex = 3;
@@ -204,16 +206,15 @@
             // passwordtxt
             // 
             this.passwordtxt.Location = new System.Drawing.Point(320, 181);
-            this.passwordtxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.passwordtxt.Margin = new System.Windows.Forms.Padding(4);
             this.passwordtxt.Name = "passwordtxt";
-            this.passwordtxt.PasswordChar = '*';
             this.passwordtxt.Size = new System.Drawing.Size(160, 22);
             this.passwordtxt.TabIndex = 4;
             // 
             // dangnhapbtn
             // 
             this.dangnhapbtn.Location = new System.Drawing.Point(320, 245);
-            this.dangnhapbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dangnhapbtn.Margin = new System.Windows.Forms.Padding(4);
             this.dangnhapbtn.Name = "dangnhapbtn";
             this.dangnhapbtn.Size = new System.Drawing.Size(100, 28);
             this.dangnhapbtn.TabIndex = 5;
@@ -224,7 +225,7 @@
             // dangkybtn
             // 
             this.dangkybtn.Location = new System.Drawing.Point(448, 245);
-            this.dangkybtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dangkybtn.Margin = new System.Windows.Forms.Padding(4);
             this.dangkybtn.Name = "dangkybtn";
             this.dangkybtn.Size = new System.Drawing.Size(100, 28);
             this.dangkybtn.TabIndex = 6;
@@ -232,11 +233,22 @@
             this.dangkybtn.UseVisualStyleBackColor = true;
             this.dangkybtn.Click += new System.EventHandler(this.dangkybtn_Click);
             // 
+            // hienPassword
+            // 
+            this.hienPassword.Location = new System.Drawing.Point(508, 179);
+            this.hienPassword.Name = "hienPassword";
+            this.hienPassword.Size = new System.Drawing.Size(75, 25);
+            this.hienPassword.TabIndex = 8;
+            this.hienPassword.Text = "Hiện";
+            this.hienPassword.UseVisualStyleBackColor = true;
+            this.hienPassword.Click += new System.EventHandler(this.hienPassword_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(845, 506);
+            this.Controls.Add(this.hienPassword);
             this.Controls.Add(this.dangkybtn);
             this.Controls.Add(this.dangnhapbtn);
             this.Controls.Add(this.passwordtxt);
@@ -245,9 +257,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMain";
-            this.Text = "Form1";
+            this.Text = "Trang chủ";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -279,6 +291,7 @@
         private System.Windows.Forms.Button dangkybtn;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripMenuItem quanlynguoidung_toolStripMenuItem;
+        private System.Windows.Forms.Button hienPassword;
     }
 }
 
