@@ -172,6 +172,7 @@
             this.lvSach.TabIndex = 0;
             this.lvSach.UseCompatibleStateImageBehavior = false;
             this.lvSach.View = System.Windows.Forms.View.Details;
+            this.lvSach.SelectedIndexChanged += new System.EventHandler(this.lvSach_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -434,6 +435,7 @@
             this.search_sachtxt.Name = "search_sachtxt";
             this.search_sachtxt.Size = new System.Drawing.Size(203, 22);
             this.search_sachtxt.TabIndex = 1;
+            this.search_sachtxt.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label10
             // 

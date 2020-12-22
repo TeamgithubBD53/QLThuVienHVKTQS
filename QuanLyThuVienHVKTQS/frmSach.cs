@@ -185,5 +185,46 @@ namespace QuanLyThuVienHVKTQS
         {
             this.Close();
         }
+
+        private void lvSach_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lvSach.SelectedItems.Count == 0)
+                return;
+            int i = Convert.ToInt32(lvSach.SelectedItems[0].SubItems[1].Text);
+            int index = l.FindIndex(m => m.masach == i);
+            txtMaSach.Text = l[index].masach.ToString();
+            txtTenSach.Text = l[index].tensach.ToString();
+            txtTacGia.Text = l[index].tentacgia.ToString();
+            if (l[index].manxb != null)
+                cbbNXB.Text = l[index].nhaxuatban.tennxb.ToString();
+            else
+                cbbNXB.Text = "";
+            txtNamXB.Text = l[index].namxb.ToString();
+            txtSoTrang.Text = l[index].sotrang.ToString();
+            txtGiaTien.Text = l[index].giatien.ToString();
+            txtSoLuong.Text = l[index].soluong.ToString();
+            txtNgonNgu.Text = l[index].ngonngu.ToString();
+            txtTheLoai.Text = l[index].theloai.ToString();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            int i = 1;
+            QuanLiThuVienHVKTQSDataContext db = new QuanLiThuVienHVKTQSDataContext();
+            var lst = (from s in db.saches where (s.masach.ToString().Contains(search_sachtxt.Text) || s.tensach.ToString().Contains(search_sachtxt.Text)) select s).ToList();
+            lvSach.Items.Clear();
+            foreach (sach s in lst)
+            {
+                ListViewItem item = new ListViewItem();
+                item.Text = "" + i++;
+                item.SubItems.Add(s.masach.ToString());
+                item.SubItems.Add(s.tensach.ToString());
+                item.SubItems.Add(s.theloai.ToString());
+                item.SubItems.Add(s.ngonngu.ToString());
+                item.SubItems.Add(s.soluong.ToString());
+
+                lvSach.Items.Add(item);
+            }
+        }
     }
 }
