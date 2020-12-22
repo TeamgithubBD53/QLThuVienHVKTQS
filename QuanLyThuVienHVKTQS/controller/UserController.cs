@@ -36,7 +36,7 @@ namespace QuanLyThuVienHVKTQS.controller
         {
             try
             {
-                var result = db.Users.First(m => m.UserName == user.UserName);
+                var result = db.Users.FirstOrDefault(m => m.UserName == user.UserName);
                 if (result == null)
                 {
                     db.Users.InsertOnSubmit(user);
