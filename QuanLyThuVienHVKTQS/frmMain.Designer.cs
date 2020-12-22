@@ -44,6 +44,7 @@
             this.quảnLýMượntrảSáchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.quanlynguoidung_toolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hướngDẫnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -60,7 +61,8 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.quanLiHêThôngToolStripMenuItem,
-            this.quanLiDanhMucToolStripMenuItem});
+            this.quanLiDanhMucToolStripMenuItem,
+            this.hướngDẫnToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(845, 28);
@@ -80,19 +82,19 @@
             // đăngXuâtToolStripMenuItem
             // 
             this.đăngXuâtToolStripMenuItem.Name = "đăngXuâtToolStripMenuItem";
-            this.đăngXuâtToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.đăngXuâtToolStripMenuItem.Size = new System.Drawing.Size(218, 26);
             this.đăngXuâtToolStripMenuItem.Text = "Đăng xuất";
             this.đăngXuâtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuâtToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(221, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(215, 6);
             // 
             // thoatChươngTrinhToolStripMenuItem
             // 
             this.thoatChươngTrinhToolStripMenuItem.Name = "thoatChươngTrinhToolStripMenuItem";
-            this.thoatChươngTrinhToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.thoatChươngTrinhToolStripMenuItem.Size = new System.Drawing.Size(218, 26);
             this.thoatChươngTrinhToolStripMenuItem.Text = "Thoát chương trình";
             this.thoatChươngTrinhToolStripMenuItem.Click += new System.EventHandler(this.thoatChươngTrinhToolStripMenuItem_Click);
             // 
@@ -168,6 +170,13 @@
             this.quanlynguoidung_toolStripMenuItem.Size = new System.Drawing.Size(248, 26);
             this.quanlynguoidung_toolStripMenuItem.Text = "Quản lý người dùng";
             this.quanlynguoidung_toolStripMenuItem.Click += new System.EventHandler(this.quanlynguoidung_toolStripMenuItem_Click);
+            // 
+            // hướngDẫnToolStripMenuItem
+            // 
+            this.hướngDẫnToolStripMenuItem.Name = "hướngDẫnToolStripMenuItem";
+            this.hướngDẫnToolStripMenuItem.Size = new System.Drawing.Size(98, 24);
+            this.hướngDẫnToolStripMenuItem.Text = "Hướng dẫn";
+            this.hướngDẫnToolStripMenuItem.Click += new System.EventHandler(this.hướngDẫnToolStripMenuItem_Click);
             // 
             // imageList1
             // 
@@ -259,6 +268,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trang chủ";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -292,6 +302,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripMenuItem quanlynguoidung_toolStripMenuItem;
         private System.Windows.Forms.Button hienPassword;
+        private System.Windows.Forms.ToolStripMenuItem hướngDẫnToolStripMenuItem;
     }
 }
 

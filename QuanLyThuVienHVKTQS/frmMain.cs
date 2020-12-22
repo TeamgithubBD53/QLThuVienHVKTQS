@@ -121,6 +121,12 @@ namespace QuanLyThuVienHVKTQS
             frmUser user = new frmUser();
             user.ShowDialog();
         }
+
+        private void Show_HD()
+        {
+            FrmHuongDan hd = new FrmHuongDan();
+            hd.ShowDialog();
+        }
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
 
@@ -250,6 +256,11 @@ namespace QuanLyThuVienHVKTQS
                 hienPassword.Text = "Hiện";
                 passwordtxt.UseSystemPasswordChar = true;
             }    
+        }
+
+        private void hướngDẫnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Show_HD();
         }
     }
 }
