@@ -117,6 +117,7 @@ namespace QuanLyThuVienHVKTQS
         private void Sua_DG_Click(object sender, EventArgs e)
         {
             btn_enable(true);
+            sothetxt.Enabled = false;
             Sua_bool = true;
         }
 
