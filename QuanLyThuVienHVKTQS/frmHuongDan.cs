@@ -20,9 +20,16 @@ namespace QuanLyThuVienHVKTQS
 
         private void GetFileAll(string tenfile)
         {
-            StreamReader doc = File.OpenText(tenfile);
+            StreamReader doc = File.OpenText("../../../Resource/" + tenfile);
             string s = doc.ReadToEnd();
             txtGioiThieu.Text = s;
+        }
+
+
+        private void GetImgAll(string tenimg)
+        {
+            Image img = Image.FromFile("../../../Resource/" + @tenimg);
+            pictureBox1.BackgroundImage = img;
         }
 
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
@@ -30,43 +37,32 @@ namespace QuanLyThuVienHVKTQS
             if (e.Node.Name == "gtPhanMem")
             {
                 GetFileAll("GioiThieuChung.txt");
-                Image img = Image.FromFile(@"hvktqs.jpg");
-                pictureBox1.BackgroundImage = img;
+                GetImgAll(@"hvktqs.jpg");
             }
             else if (e.Node.Name == "gtManHinhChinh")
             {
-                //GetFileAll("GioiThieuChung.txt");
-                txtGioiThieu.Text = "Trang chủ";
-                Image img = Image.FromFile(@"trangchu.png");
-                pictureBox1.BackgroundImage = img;
+                GetFileAll("GioiThieuChung.txt");
+                GetImgAll(@"trangchu.png");
             }
             else if (e.Node.Name == "gtSach")
             {
-                //GetFileAll("GioiThieuChung.txt");
-                txtGioiThieu.Text = "Giới thiệu về sách";
-                Image img = Image.FromFile(@"sach.png");
-                pictureBox1.BackgroundImage = img;
+                GetFileAll("GioiThieuChung.txt");
+                GetImgAll(@"sach.png");
             }
             else if (e.Node.Name == "gtNhaXuatBan")
             {
-                //GetFileAll("GioiThieuChung.txt");
-                txtGioiThieu.Text = "Giới thiệu về nhà xuất bản";
-                Image img = Image.FromFile(@"nxb.png");
-                pictureBox1.BackgroundImage = img;
+                GetFileAll("GioiThieuChung.txt");
+                GetImgAll(@"nxb.png");
             }
             else if (e.Node.Name == "gtNhanVien")
             {
-                //GetFileAll("GioiThieuChung.txt");
-                txtGioiThieu.Text = "Giới thiệu về Nhân viên";
-                Image img = Image.FromFile(@"nhanvien.png");
-                pictureBox1.BackgroundImage = img;
+                GetFileAll("GioiThieuChung.txt");
+                GetImgAll(@"nhanvien.png");
             }
             else if (e.Node.Name == "gtTTMuon")
             {
-                //GetFileAll("GioiThieuChung.txt");
-                txtGioiThieu.Text = "Giới thiệu về thông tin mượn trả";
-                Image img = Image.FromFile(@"ttmuon.png");
-                pictureBox1.BackgroundImage = img;
+                GetFileAll("GioiThieuChung.txt");
+                GetImgAll(@"ttmuon.png");
             }
         }
     }

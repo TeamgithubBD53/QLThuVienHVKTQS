@@ -110,7 +110,7 @@ namespace QuanLyThuVienHVKTQS
 
         private void btnXoaSach_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("ban co thuc su muon xoa?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+            DialogResult result = MessageBox.Show("Bạn có thực sự muốn xóa không?", "Xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
             if (result == DialogResult.Yes)
             {
                 int masach = Convert.ToInt32(txtMaSach.Text);
@@ -119,7 +119,7 @@ namespace QuanLyThuVienHVKTQS
                     HienThiSach();
                 else
                 {
-                    MessageBox.Show("khong xoa duoc!");
+                    MessageBox.Show("Không thể xóa được!");
                 }
             }
         }
@@ -130,17 +130,49 @@ namespace QuanLyThuVienHVKTQS
             {
                 sach entity = new sach();
                 //txtMaSach.Text = "";
-                entity.tensach = txtTenSach.Text;
-                entity.tentacgia = txtTacGia.Text;
+                if(txtTenSach.Text.Length > 0)
+                    entity.tensach = txtTenSach.Text;
+                else
+                {
+                    MessageBox.Show("Chưa nhập đủ thông tin");
+                    return;
+                }                    
+                if(txtTacGia.Text.Length > 0)
+                    entity.tentacgia = txtTacGia.Text;
+                else
+                {
+                    MessageBox.Show("Chưa nhập đủ thông tin");
+                    return;
+                }
                 entity.manxb = Convert.ToInt32(cbbNXB.SelectedValue.ToString());
                 if (txtNamXB.Text.Length > 0)
                     entity.namxb = Convert.ToInt32(txtNamXB.Text);
+                else
+                {
+                    MessageBox.Show("Chưa nhập đủ thông tin");
+                    return;
+                }
                 if (txtSoTrang.Text.Length > 0)
                     entity.sotrang = Convert.ToInt32(txtSoTrang.Text);
+                else
+                {
+                    MessageBox.Show("Chưa nhập đủ thông tin");
+                    return;
+                }
                 if (txtGiaTien.Text.Length > 0)
                     entity.giatien = Convert.ToDecimal(txtGiaTien.Text);
+                else
+                {
+                    MessageBox.Show("Chưa nhập đủ thông tin");
+                    return;
+                }
                 if (txtSoLuong.Text.Length > 0)
                     entity.soluong = Convert.ToInt32(txtSoLuong.Text);
+                else
+                {
+                    MessageBox.Show("Chưa nhập đủ thông tin");
+                    return;
+                }
                 entity.ngonngu = txtNgonNgu.Text;
                 entity.theloai = txtTheLoai.Text;
                 var s = new SachController();

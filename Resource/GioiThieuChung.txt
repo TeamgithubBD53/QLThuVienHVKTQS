@@ -1,0 +1,4 @@
+Thiết kế phần mềm quản lý thư viện
+Người thực hiện: Nguyễn Thị Thanh Thùy, Nguyễn Anh Dũng, Bùi Văn Dương, Nguyễn Thị Kim Khánh, Huỳnh Văn Tá, Lê Anh Thắng.
+- Phần mềm quản lý thư viện HVKTQS này được thiết kế nhằm phục vụ cho hoạt động của thư viện trong quá trình mượn trả sách của độc giả
+- Phần mềm hỗ trợ: 
