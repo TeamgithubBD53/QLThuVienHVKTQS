@@ -133,7 +133,7 @@ namespace QuanLyThuVienHVKTQS
                     HienThi_User();
                 }
                 else
-                    MessageBox.Show("Thêm không thành công");
+                    MessageBox.Show("sửa không thành công");
             }
             btn_enable(false);
         }
