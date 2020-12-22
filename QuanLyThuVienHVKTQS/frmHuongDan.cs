@@ -30,7 +30,7 @@ namespace QuanLyThuVienHVKTQS
             if (e.Node.Name == "gtPhanMem")
             {
                 GetFileAll("GioiThieuChung.txt");
-                Image img = Image.FromFile(@"trangchu.png");
+                Image img = Image.FromFile(@"hvktqs.jpg");
                 pictureBox1.BackgroundImage = img;
             }
             else if (e.Node.Name == "gtManHinhChinh")
